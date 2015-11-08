@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/rmedina423/fashion-site#readme",
   "dependencies": {
+    "handlebars": "^4.0.4",
     "normalize.css": "^3.0.3"
   }
 }
