@@ -2,10 +2,49 @@
  * Site header
  */
 
+
 .site-header {
-	background-color: pink;
-	min-height: 36px;
+	background-color: #000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 0 8px;
+	overflow: hidden;
+	z-index: 2;
+	text-transform: uppercase;
+
+	> div {
+		display: flex;
+		align-items: center;
+		min-height: 36px;
+	}
+
+	.site-title {
+		flex: 1;
+	}
+
+	.site-title > a {
+		letter-spacing: 7px;
+	}
+
+	.menu {
+		display: none;
+	}
+
 }
+
+ @include media-query($on-laptop) {
+	.site-header .menu {
+		display: initial;
+	}
+
+	.menu > a {
+		padding: 0 5px;
+		font-size: 11px;
+		letter-spacing: 2px;
+	}
+ }
 
 
 /**
@@ -13,7 +52,6 @@
  */
 
 .site-footer {
-	background-color: lime;
 	min-height: 120px;
 }
 
